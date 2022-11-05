@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>|VIT Pune Parallax Website|</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo">VIT PUNE</a>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Work</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </header>
+    <section>
+        <img src="stars.png" id="stars">
+        <img src="moon.png" id="moon">
+        <img src="mountains_behind.png" id="mountains_behind">
+        <h2 id="text">PUNE</h2>
+        <a href="#sec" id="btn">Explore</a>
+        <img src="mountains_front.png" id="mountains_front">
+    </section>
+    <div class="sec" id="sec">
+        <h2>Vishwakarma Institute of Technology, Pune </h2>
+        <p>Vishwakarma Institute of Technology (VIT) is an autonomous institute in Pune, Maharashtra, India.[1] Established in 1983, the institute is affiliated with the Savitribai Phule Pune University and run by the Bansilal Ramnath Agarwal Charitable
+            Trust. The institution is ISO 9001-2015 certified by BSI, India, and was accredited ('A++' Grade) by National Assessment and Accreditation Council (NAAC), Bangalore from November 2018 until 2023.
+            <br><br>Vishwakarma Institute of Technology is run by Bansilal Ramnath Agarwal Charitable Trust (BRACT). The Trust was established on the 16th of June 1975 under the Bombay Trust Act of 1950. The Trust undertakes educational, religious, and
+            social activities. As per Indian mythology, Vishwakarma was an architect-engineer of the Gods. BRACT has promoted schools and professional training institutes such as Vishwakarma Institute of Technology, Vishwakarma Institute of Information
+            Technology, Vishwakarma Institute of Management, Vishwakarma Schools and colleges, Maritime Institute, and Vishwakarma Global Business School.
+            <br><br>The campus is spread over 7 acres (28,000 m2). It consists of four buildings, a cafeteria, a coffee store, a fruit juice stand, a breakfast centre, NPB, and a fully air-conditioned auditorium with ceiling fans. The students' hostel
+            is located about 3.5 km off-campus.
+        </p>
+    </div>
+
+    <script>
+        let stars = document.getElementById('stars');
+        let Moon = document.getElementById('moon');
+        let mountains_behind = document.getElementById('mountains_behind');
+        let text = document.getElementById('text');
+        let btn = document.getElementById('btn');
+        let mountains_front = document.getElementById('mountains_front');
+        let header = document.querySelector('header');
+
+        window.addEventListener('scroll', function() {
+            let value = window.scrollY;
+            stars.style.left = value * 0.25 + 'px';
+            moon.style.top = value * 1.05 + 'px';
+            mountains_behind.style.top = value * 0.05 + 'px';
+            mountains_front.style.top = value * 0 + 'px';
+            text.style.marginRight = value * 4 + 'px';
+            text.style.marginTop = value * 1.5 + 'px';
+            btn.style.marginTop = value * 1.5 + 'px';
+            header.style.top = value * 0.5 + 'px';
+        })
+    </script>
+</body>
+
+</html>
